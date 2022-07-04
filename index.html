@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Photo Gallery Icon</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background: #9ccc66;
+		}
+		.container{
+			width: 600px;
+			height: 600px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		.nail{
+			width: 35px;
+			height: 35px;
+			background: #fff;
+			border: 5px solid #344d5b;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		.nail:before, .nail:after{
+			content: '';
+			width: 5px;
+			height: 200px;
+			background: #344d5b;
+			position: absolute;
+			top: 20px;
+			transform-origin: top;
+		}
+		.nail:before{
+			left: 0;
+			transform: rotate(60deg);
+		}
+		.nail:after{
+			right: 0;
+			transform: rotate(-60deg);
+		}
+		.photo{
+			width: 450px;
+			height: 300px;
+			background: linear-gradient(#81d5fa 80%, #9fca7b 20%);
+			border: 20px solid #e8e8e8;
+			border-radius: 10px;
+			position: absolute;
+			top: 20%;
+			left: 0;
+			right: 0;
+			margin: auto;
+			overflow: hidden;
+		}
+		.sun{
+			width: 60px;
+			height: 60px;
+			background: #fff176;
+			border-radius: 50%;
+			position: absolute;
+			top: 34px;
+			right: 26px;
+		}
+		.clouds{
+			width: 87px;
+			height: 30px;
+			background: transparent;
+			position: absolute;
+			top: 30px;
+			right: 100px;
+			overflow: hidden;
+		}
+		.cloud{
+			width: 32px;
+			height: 32px;
+			background: #fff;
+			border-radius: 50%;
+			position: absolute;
+
+		}
+		.cloud1{
+			bottom: -15px;
+		}
+		.cloud2{
+			left: 28px;
+			bottom: -12px;
+			transform: scale(1.4);
+		}
+		.cloud3{
+			right: 3px;
+			bottom: -15px;
+			transform: scale(1.1);
+		}
+		.peak{
+			width: 240px;
+			height: 200px;
+			background: #566374;
+			clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+			position: absolute;
+			bottom: 0;
+		}
+		.peak:before{
+			content: '';
+			width: 215px;
+			height: 70px;
+			background: #fff;
+			position: absolute;
+			right: 0;
+			transform-origin: top;
+			transform: rotate(41deg) translate(90px, -5px);
+		}
+		.peak1{
+			left: -28px;
+			bottom: -10px;
+			transform: scale(.95);
+		}
+		.peak1:before{
+			transform: rotate(40deg) translate(90px, -18px);
+		}
+		.peak2{
+			left: 40px;
+		}
+		.shadow{
+			width: 180px;
+			height: 180px;
+			background: #3d4c5f;
+			clip-path: polygon(51% 0, 90% 60%, 100% 100%, 0 100%, 0% 0%);
+			position: absolute;
+			bottom: -10px;
+			left: -15px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="nail"></div>
+		<div class="photo">
+			<div class="sun"></div>
+			<div class="clouds">
+				<div class="cloud cloud1"></div>
+				<div class="cloud cloud2"></div>
+				<div class="cloud cloud3"></div>
+			</div>
+			<div class="peak peak1"></div>
+			<div class="peak peak2">
+				<div class="shadow"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
